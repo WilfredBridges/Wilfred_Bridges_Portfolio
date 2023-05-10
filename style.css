@@ -35,11 +35,12 @@ h1 {
     font-size: 2em;
 }
 
-p {
-   border: 2px aqua solid;
-   padding: 10px;
-   font-size: 1.2em;
-}
+ p {
+    /*border: 2px solid #00ff00;*/
+    padding: 10px;
+    font-size: 1.2em;
+    
+  }
 
 #about_me {
     text-align:center;
