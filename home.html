@@ -14,9 +14,9 @@
             WB
         </div>
         <nav>
-            <a href="#">About Me</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
+            <a href="#about_me">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
     
@@ -27,8 +27,8 @@
             <h1><strong id="w">W</strong>ilfred <strong id="b">B</strong>ridges</h1>
           <h2>Full Stack Developer</h2>
           <div class="hero-buttons">
-            <a href="mailto:wbridges905@gmail.com" target="_blank">Send me an email</a>
-            <a href="https://github.com/WilfredBridges" target="_blank">Visit my GitHub page</a>
+            <a href="mailto:wbridges905@gmail.com" target="_blank">Email</a>
+            <a href="https://github.com/WilfredBridges" target="_blank">GitHub</a>
           </div>
         </div>
       </section>
@@ -50,41 +50,41 @@
       <section id="projects">
         <h2>My Projects</h2>
         <div class="project-container">
-          <a href="project-link-1">
+          <a href="#">
             <div class="project">
-              <img src="project-image-1" alt="Project 1">
+              <img src="https://c.tadst.com/gfx/1200x630/fb-stopwatch2.png?1" alt="Project 1">
               <div class="project-overlay">
                 <p>Project 1</p>
               </div>
             </div>
           </a>
-          <a href="project-link-2">
+          <a href="#">
             <div class="project">
-              <img src="project-image-2" alt="Project 2">
+              <img src="https://kinsta.com/wp-content/uploads/2020/04/code-review-tools.png" alt="Project 2">
               <div class="project-overlay">
                 <p>Project 2</p>
               </div>
             </div>
           </a>
-          <a href="project-link-3">
+          <a href="#">
             <div class="project">
-              <img src="project-image-3" alt="Project 3">
+              <img src="https://ico.org.uk/media/4017813/childrens-code-website-blue.jpg" alt="Project 3">
               <div class="project-overlay">
                 <p>Project 3</p>
               </div>
             </div>
           </a>
-          <a href="project-link-4">
+          <a href="#">
             <div class="project">
-              <img src="project-image-4" alt="Project 4">
+              <img src="https://cdn.hswstatic.com/gif/morse-code.jpg" alt="Project 4">
               <div class="project-overlay">
                 <p>Project 4</p>
               </div>
             </div>
           </a>
-          <a href="project-link-5">
+          <a href="#">
             <div class="project">
-              <img src="project-image-5" alt="Project 5">
+              <img src="https://news.mit.edu/sites/default/files/images/202012/MIT-Coding-Brain-01-press.jpg" alt="Project 5">
               <div class="project-overlay">
                 <p>Project 5</p>
               </div>
@@ -92,9 +92,22 @@
           </a>
         </div>
       </section>
+
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <form method="post" action="send.php">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="company">Company:</label>
+          <input type="text" id="company" name="company" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
       
       <footer>
-        <p class="para">Thank you for taking the time to learn a little bit about me. If you're interested in working together or have any advice for someone starting out in the field, please don't hesitate to [provide contact information].</p>
+        <!--<p class="para">Thank you for taking the time to learn a little bit about me. If you're interested in working together or have any advice for someone starting out in the field, please don't hesitate to [provide contact information].</p>-->
       </footer>
 
       <script src="portfolio.js"></script>

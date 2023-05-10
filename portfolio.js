@@ -1,6 +1,5 @@
 const images = [
     '/media/Wilfred1.png',
-    '/media/Wilfred2.png',
     '/media/Wilfred3.png',
   ];
   

@@ -22,7 +22,7 @@ nav a{
 
 body {
     background-color: rgb(26, 26, 49);
-    color:beige;
+    color:white;
     font-family: 'Gothic A1', sans-serif;
 }
 
@@ -122,6 +122,8 @@ h1 {
   #projects {
     text-align: center;
     margin: 50px 0;
+    border-top: 1px solid #ccc;
+    padding: 50px 0;
   }
   
   .project-container {
@@ -132,7 +134,7 @@ h1 {
   
   .project {
     position: relative;
-    width: calc(20% - 10px);
+    /*width: calc(20% - 10px);*/
     margin-bottom: 20px;
     overflow: hidden;
   }
@@ -141,9 +143,11 @@ h1 {
     width: 100%;
     height: auto;
     transition: opacity 0.3s ease-in-out;
+    border: 1px solid greenyellow;
   }
   
   .project-overlay {
+    color:white;
     position: absolute;
     top: 0;
     left: 0;
@@ -164,38 +168,157 @@ h1 {
   .project:hover .project-overlay {
     opacity: 1;
   }
+
+  #contact {
+    text-align: center;
+    margin: 50px 0;
+    border-top: 1px solid #ccc;
+    padding: 50px 0;
+  }
+  
+  #contact h2 {
+    margin-bottom: 20px;
+  }
+  
+  #contact form {
+    display: inline-block;
+    text-align: left;
+  }
+  
+  #contact label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+  }
+  
+  #contact input,
+  #contact textarea {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f2f2f2;
+    font-size: 1.2em;
+  }
+  
+  #contact button {
+    display: block;
+    padding: 15px 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  #contact button:hover {
+    background-color: #3e8e41;
+  }
+
+  
+ 
   
   footer {
     text-align: center;
   }
 
-  /* Media query for tablet viewports */
+/* Media query for mobile viewports */
+@media (max-width: 480px) {
+    
+    nav a {
+    font-size: 1.2em;
+
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+      }
+    
+      .left-column {
+        margin-bottom: 20px;
+      }
+    
+      #image {
+        height: 150px;
+      }
+
+      .para {
+        max-width: 300px;
+      }
+
+      #contact {
+        text-align: center;
+        margin: 50px 0;
+      }
+      
+      #contact h2 {
+        margin-bottom: 20px;
+      }
+      
+      #contact form {
+        display: inline-block;
+        text-align: left;
+      }
+      
+      #contact label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      
+      #contact input,
+      #contact textarea {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #f2f2f2;
+      }
+      
+      #contact button {
+        display: block;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 1.2em;
+        cursor: pointer;
+      }
+      
+      #contact button:hover {
+        background-color: #3e8e41;
+      }
+}
+
+
+/* Media query for tablet viewports */
 @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 3em;
+    .grid-container {
+      grid-template-columns: 1fr;
     }
   
-    .hero h2 {
-      font-size: 1.5em;
+    .left-column {
+      margin-bottom: 20px;
     }
   
-    .hero-buttons a {
-      font-size: 1em;
-      padding: 8px 16px;
-    }
-  }
-  
-  /* Media query for mobile viewports */
-  @media (max-width: 480px) {
-    nav a{
-        text-decoration: none;
-        color:white;
-        margin: 10px 20px;
-    
-    
-        
+    #image {
+      height: 200px;
     }
 
+    .para:last-of-type {
+        width: 100%;
+      }
   }
-
   
+
+  @media (min-width: 769px) {
+    .project {
+    width: 300px;
+    height:150px;
+  }
+  }
