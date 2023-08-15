@@ -1,0 +1,81 @@
+/* components/Header.css */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0; /* Increase padding for more space */
+    text-align: center;
+    margin-top: 80px;
+  }
+  
+  .header-content {
+    animation: fadeInUp 1s ease;
+    margin-top: 40px; /* Increase top margin for more spacing */
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px; /* Add spacing */
+  }
+  
+  .navbar-list li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .navbar-list li a:hover {
+    color: #ff9900;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+    
+    .navbar-list {
+      display:contents;
+    }
+    
+    .navbar-list.show {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 80px; /* Adjust dropdown position */
+      right: 20px;
+      background-color: #333;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    
+    .navbar-list.show li {
+      margin: 10px 0; /* Increase spacing */
+    }
+    
+    .navbar-toggle {
+      cursor: pointer;
+      display: block;
+      color: #fff;
+      font-size: 24px; /* Slightly increase font size */
+    }
+  }
+  
