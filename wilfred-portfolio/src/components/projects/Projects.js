@@ -1,49 +1,72 @@
-// components/Projects.js
-import React from 'react';
-import './Projects.css'; // Import your custom CSS
+import React, { useState } from 'react';
+import './Projects.css'; // You can create your own CSS file for styling
 
-function Projects() {
-  const projects = [
-    {
-      title: 'Project 1',
-      image: '../components/media/images/react.svg', // Replace with the actual path
-      liveDemoLink: 'link-to-demo-1', // Replace with the actual link
-      githubLink: 'link-to-github-1' // Replace with the actual link
-    },
-    {
-      title: 'Project 2',
-      image: '../components/media/images/react.svg',
-      liveDemoLink: 'link-to-demo-2',
-      githubLink: 'link-to-github-2'
-    },
-    {
-      title: 'Project 3',
-      image: '../components/media/images/react.svg',
-      liveDemoLink: 'link-to-demo-3',
-      githubLink: 'link-to-github-3'
-    }
-  ];
+const projects = [
+  {
+    id: 1,
+    title: 'Project 1',
+    description: 'Brief description of Project 1',
+    previewImage: 'project1-preview.jpg',
+    liveDemoLink: 'https://project1-demo.com',
+    githubLink: 'https://github.com/project1'
+  },
+  {
+    id: 2,
+    title: 'Project 2',
+    description: 'Brief description of Project 2',
+    previewImage: 'project2-preview.jpg',
+    liveDemoLink: 'https://project2-demo.com',
+    githubLink: 'https://github.com/project2'
+  },
+  {
+    id: 3,
+    title: 'Project 3',
+    description: 'Brief description of Project 3',
+    previewImage: 'project3-preview.jpg',
+    liveDemoLink: 'https://project3-demo.com',
+    githubLink: 'https://github.com/project3'
+  }
+];
+
+const Carousel = () => {
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+  const totalProjects = projects.length;
+
+  const handlePrevClick = () => {
+    setCurrentProjectIndex((prevIndex) => (prevIndex - 1 + totalProjects) % totalProjects);
+  };
+
+  const handleNextClick = () => {
+    setCurrentProjectIndex((prevIndex) => (prevIndex + 1) % totalProjects);
+  };
+
+  const currentProject = projects[currentProjectIndex];
 
   return (
-    <div className="projects-carousel">
-      {projects.map((project, idx) => (
-        <div className="carousel-item" key={idx}>
-          <img
-            className="carousel-image"
-            src={project.image}
-            alt={`Slide ${idx + 1}`}
-          />
-          <div className="carousel-caption">
-            <h3>{project.title}</h3>
-            <div className="button-links">
-              <a href={project.liveDemoLink} target="_blank" rel="noopener noreferrer" className="btn-primary">Live Demo</a>
-              <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="btn-secondary">GitHub</a>
-            </div>
+    <div className="carousel-container">
+      <div className="carousel">
+        <div className="carousel-image">
+          <img src={currentProject.previewImage} alt={currentProject.title} />
+        </div>
+        <div className="carousel-content">
+          <h2>{currentProject.title}</h2>
+          <p>{currentProject.description}</p>
+          <div className="carousel-links">
+            <a href={currentProject.liveDemoLink} target="_blank" rel="noopener noreferrer">
+              Live Demo
+            </a>
+            <a href={currentProject.githubLink} target="_blank" rel="noopener noreferrer">
+              GitHub Repository
+            </a>
           </div>
         </div>
-      ))}
+      </div>
+      <div className="carousel-controls">
+        <button onClick={handlePrevClick}>Previous</button>
+        <button onClick={handleNextClick}>Next</button>
+      </div>
     </div>
   );
-}
+};
 
-export default Projects;
+export default Carousel;

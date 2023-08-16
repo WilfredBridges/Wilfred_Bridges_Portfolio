@@ -8,7 +8,7 @@ const Header = () => {
     <header className="header">
       <Navbar /> {/* Include the Navbar component */}
       <div className="header-content">
-        <h1>Your Name</h1>
+        <h1>Wilfred Bridges</h1>
         <p>Web Developer</p>
       </div>
     </header>

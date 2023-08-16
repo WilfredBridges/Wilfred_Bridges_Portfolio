@@ -1,15 +1,17 @@
 /* components/Header.css */
 .header {
+    background-image: url('../../media/images/top-view.jpg');
+    background-size: cover;
     background-color: #333;
     color: #fff;
-    padding: 2rem 0; /* Increase padding for more space */
+    padding: 24rem 42rem 22rem 47rem; /* Increase padding for more space */
     text-align: center;
-    margin-top: 80px;
+    margin-top: 0px;
   }
   
   .header-content {
-    animation: fadeInUp 1s ease;
-    margin-top: 40px; /* Increase top margin for more spacing */
+    animation: fadeInUp 3s ease;
+    margin-top: 20px; /* Increase top margin for more spacing */
   }
   
   @keyframes fadeInUp {
