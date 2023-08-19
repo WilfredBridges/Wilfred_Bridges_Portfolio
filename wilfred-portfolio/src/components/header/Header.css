@@ -8,16 +8,31 @@
     text-align: center;
     margin-top: 0px;
   }
+
+  .name {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+    font-weight: 100;
+    color:#ff9900;
+    line-height: 0.2; 
+    padding-left: 10px;
+  }
   
   .header-content {
-    animation: fadeInUp 3s ease;
-    margin-top: 20px; /* Increase top margin for more spacing */
+    animation: fadeInUp 6s ease;
+    
+    
+  }
+
+  h1 {
+    display: flex;
+    
   }
   
   @keyframes fadeInUp {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(40px);
     }
     to {
       opacity: 1;

@@ -2,13 +2,15 @@
 import React from 'react';
 import './Header.css';
 import Navbar from '../navbar/Navbar'
+import Socials from '../socials/Socials'
 
 const Header = () => {
   return (
     <header className="header">
-      <Navbar /> {/* Include the Navbar component */}
+      <Navbar /> 
+      <Socials />
       <div className="header-content">
-        <h1>Wilfred Bridges</h1>
+        <h1><strong className='name'>W</strong>ilfred <strong className='name'>B</strong>ridges</h1>
         <p>Web Developer</p>
       </div>
     </header>

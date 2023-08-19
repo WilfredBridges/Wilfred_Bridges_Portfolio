@@ -5,7 +5,7 @@ import AboutMe from './components/aboutme/AboutMe'
 import Skills from './components/skills/Skills'
 import Projects from './components/projects/Projects'
 import Contact from './components/contact/Contact'
-import Hero from './components/hero/hero'
+import MyCarousel from './components/carousel/Carousel';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <div className='about'>
       <AboutMe />
       <Skills />
-      <Projects />
+      <MyCarousel/>
       </div>
       <div>
         <Contact />

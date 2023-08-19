@@ -1,0 +1,66 @@
+.socials {
+    display: flex;
+    justify-content: flex-end; /* Change to flex-end for right alignment */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+  
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 100%;
+    transition: background-color 0.3s, transform 0.1s;
+    cursor: pointer;
+    position: relative;
+    padding-left: 50px;
+  }
+  
+  .social-icon:hover {
+    
+    transform: translateY(2px);
+  }
+  
+  .social-icon svg {
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s;
+  }
+
+  .social-svg {
+    fill: #ffffff; /* Set the desired color */
+    transition: fill 0.3s;
+  }
+  
+  .social-icon .social-text {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    /* transform: translateX(-50%); */
+    display: none;
+    color: #ff9900;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+    opacity: 0;
+    transition: opacity 0.3s, top 0.1s;
+  }
+  
+  .social-icon:hover svg {
+    opacity: 0; /* Hide the SVG on hover */
+  }
+  
+  .social-icon:hover .social-text {
+    display: block;
+    opacity: 1;
+    top: 0%;
+  }
+  
